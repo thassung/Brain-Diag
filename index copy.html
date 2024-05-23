@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html data-darkreader-mode="dynamic" data-darkreader-scheme="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/vite.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script defer="" src="./crosshairs_files/crossHairs.js.download"></script>
+		<meta name="color-scheme" content="light dark" />
+		<title>Vite + Preact</title>
+	</head>
+	<body>
+		<div id="app"></div>
+		<!-- <script type="module" src="/src/index.jsx"></script> -->
+		<!-- <script defer="" src="/src/crossHairs.js.download"></script> -->
+		<div id="demo-toolbar">
+			<button>Reset Camera</button>
+			<select>
+				<option value="Maximum Intensity Projection">Maximum Intensity Projection</option>
+				<option value="Minimum Intensity Projection">Minimum Intensity Projection</option>
+				<option value="Average Intensity Projection">Average Intensity Projection</option>
+			</select>
+			<button id="syncSlabThickness" style="background-color: rgb(255, 255, 255); --darkreader-inline-bgcolor: #181a1b;" data-darkreader-inline-bgcolor="">Sync Slab Thickness</button>
+		</div>
+		<div id="content">
+			<div style="display: flex; flex-direction: row;">
+				<div style="width: 500px; height: 500px; cursor: url(&quot;blob:https://www.cornerstonejs.org/22d63089-3fd1-43b7-860d-9c186d28b979&quot;) 8 8, default;" 
+				tabindex="-1" data-viewport-uid="CT_AXIAL" data-rendering-engine-uid="myRenderingEngine">
+					<div class="viewport-element" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+						<canvas class="cornerstone-canvas" style="position: absolute; width: 500px; height: 500px; image-rendering: pixelated;" width="500" height="500"></canvas>
+						<svg class="svg-layer" id="svg-layer-CT_AXIAL" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; pointer-events: none; position: absolute;">
+							<defs>
+								<filter id="shadow-svg-layer-CT_AXIAL" filterUnits="userSpaceOnUse">
+									<feoffset result="offOut" in="SourceGraphic" dx="0.5" dy="0.5"></feoffset>
+									<fecolormatrix result="matrixOut" in="offOut" in2="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"></fecolormatrix>
+									<feblend in="SourceGraphic" in2="matrixOut" mode="normal"></feblend>
+								</filter>
+							</defs>
+							<line x1="250.00001525878906" y1="229.99998474121094" x2="250.00001525878906" y2="0" stroke="rgb(200, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+							style="--darkreader-inline-stroke: #c3c300;"></line><line x1="250.00001525878906" y1="270" x2="250.00001525878906" y2="500" stroke="rgb(200, 200, 0)" 
+							stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #c3c300;"></line>
+							<line x1="230.00001525878906" y1="249.99998474121094" x2="0" y2="249.99998474121094" stroke="rgb(0, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+							style="--darkreader-inline-stroke: #00c300;"></line><line x1="270" y1="249.99998474121094" x2="500" y2="249.99998474121094" stroke="rgb(0, 200, 0)" 
+							stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #00c300;"></line>
+							<circle cx="475" cy="25" r="7.0710678118654755" stroke="rgb(200, 0, 0)" fill="rgb(200, 0, 0)" stroke-width="2" fill-opacity="1" stroke-opacity="1" 
+							data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill: #ff4040; --darkreader-inline-stroke: #ff4040;"></circle>
+						</svg>
+					</div>
+				</div>
+				<div style="width: 500px; height: 500px; cursor: url(&quot;blob:https://www.cornerstonejs.org/22d63089-3fd1-43b7-860d-9c186d28b979&quot;) 8 8, default;" 
+				tabindex="-1" data-viewport-uid="CT_SAGITTAL" data-rendering-engine-uid="myRenderingEngine">
+					<div class="viewport-element" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+						<canvas class="cornerstone-canvas" style="position: absolute; width: 500px; height: 500px; image-rendering: pixelated;" width="500" height="500"></canvas>
+						<svg class="svg-layer" id="svg-layer-CT_SAGITTAL" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; pointer-events: none; position: absolute;">
+							<defs>
+								<filter id="shadow-svg-layer-CT_SAGITTAL" filterUnits="userSpaceOnUse">
+									<feoffset result="offOut" in="SourceGraphic" dx="0.5" dy="0.5"></feoffset>
+									<fecolormatrix result="matrixOut" in="offOut" in2="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"></fecolormatrix>
+									<feblend in="SourceGraphic" in2="matrixOut" mode="normal"></feblend>
+								</filter>
+							</defs>
+							<line x1="270" y1="250.00001525878906" x2="500" y2="250.00001525878906" stroke="rgb(200, 0, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+							style="--darkreader-inline-stroke: #c30000;"></line><line x1="229.99998474121094" y1="250.00001525878906" x2="0" y2="250.00001525878906" 
+							stroke="rgb(200, 0, 0)" stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #c30000;"></line>
+							<line x1="249.99998474121094" y1="270" x2="249.99998474121094" y2="500" stroke="rgb(0, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+							style="--darkreader-inline-stroke: #00c300;"></line><line x1="249.99998474121094" y1="230.00001525878906" x2="249.99998474121094" y2="0" 
+							stroke="rgb(0, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #00c300;"></line>
+							<circle cx="475" cy="25" r="7.0710678118654755" stroke="rgb(200, 200, 0)" fill="rgb(200, 200, 0)" stroke-width="2" fill-opacity="1" stroke-opacity="1" 
+							data-darkreader-inline-fill="" data-darkreader-inline-stroke="" style="--darkreader-inline-fill: #ffff40; --darkreader-inline-stroke: #ffff40;"></circle>
+						</svg>
+					</div>
+				</div>
+				<div style="width: 500px; height: 500px; cursor: url(&quot;blob:https://www.cornerstonejs.org/22d63089-3fd1-43b7-860d-9c186d28b979&quot;) 8 8, default;" tabindex="-1" 
+				data-viewport-uid="CT_CORONAL" data-rendering-engine-uid="myRenderingEngine"><div class="viewport-element" style="position: relative; width: 100%; height: 100%; overflow: hidden;">
+					<canvas class="cornerstone-canvas" style="position: absolute; width: 500px; height: 500px; image-rendering: pixelated;" width="500" height="500"></canvas>
+					<svg class="svg-layer" id="svg-layer-CT_CORONAL" xmlns="http://www.w3.org/2000/svg" style="width: 100%; height: 100%; pointer-events: none; position: absolute;">
+						<defs>
+							<filter id="shadow-svg-layer-CT_CORONAL" filterUnits="userSpaceOnUse"><feoffset result="offOut" in="SourceGraphic" dx="0.5" dy="0.5"></feoffset>
+								<fecolormatrix result="matrixOut" in="offOut" in2="matrix" values="0.2 0 0 0 0 0 0.2 0 0 0 0 0 0.2 0 0 0 0 0 1 0"></fecolormatrix>
+								<feblend in="SourceGraphic" in2="matrixOut" mode="normal"></feblend></filter></defs><line x1="270" y1="250.00001525878906" x2="500" y2="250.00001525878906" 
+								stroke="rgb(200, 0, 0)" stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #c30000;"></line>
+								<line x1="230.00001525878906" y1="250.00001525878906" x2="0" y2="250.00001525878906" stroke="rgb(200, 0, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+								style="--darkreader-inline-stroke: #c30000;"></line><line x1="250.00001525878906" y1="230.00001525878906" x2="250.00001525878906" y2="0" 
+								stroke="rgb(200, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" style="--darkreader-inline-stroke: #c3c300;"></line>
+								<line x1="250.00001525878906" y1="270" x2="250.00001525878906" y2="500" stroke="rgb(200, 200, 0)" stroke-width="1" data-darkreader-inline-stroke="" 
+								style="--darkreader-inline-stroke: #c3c300;"></line><circle cx="475" cy="25" r="7.0710678118654755" stroke="rgb(0, 200, 0)" fill="rgb(0, 200, 0)" 
+								stroke-width="2" fill-opacity="1" stroke-opacity="1" data-darkreader-inline-fill="" data-darkreader-inline-stroke="" 
+								style="--darkreader-inline-fill: #40ff40; --darkreader-inline-stroke: #40ff40;">
+							</circle>
+						</svg>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

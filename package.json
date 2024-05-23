@@ -1,0 +1,24 @@
+{
+	"private": true,
+	"type": "module",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview"
+	},
+	"dependencies": {
+		"@cornerstonejs/core": "^1.32.1",
+		"@cornerstonejs/dicom-image-loader": "^1.32.1",
+		"@cornerstonejs/streaming-image-volume-loader": "^1.32.1",
+		"@cornerstonejs/tools": "^1.32.1",
+		"cornerstone-wado-image-loader": "^4.13.2",
+		"dcmjs": "^0.30.3",
+		"dicom-parser": "^1.8.21",
+		"dicomweb-client": "^0.10.3",
+		"preact": "^10.13.1"
+	},
+	"devDependencies": {
+		"@preact/preset-vite": "^2.5.0",
+		"vite": "^4.3.2"
+	}
+}
